@@ -1,0 +1,71 @@
+{
+  "projectType": "saas",
+  "projectName": "Skincare Ingredient Scanner",
+  "projectDescription": "A consumer-facing app that lets users scan skincare product labels to instantly analyze ingredients, flag potential irritants, and make informed purchasing decisions.",
+  "theme": "almond",
+  "primaryColor": "#C47B6A",
+  "lightColor": "#F5EAE6",
+  "darkColor": "#7A3E30",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "how-it-works"
+            ]
+          },
+          {
+            "group": "Scanning",
+            "pages": [
+              "scanning/scan-a-product",
+              "scanning/photo-tips",
+              "scanning/manual-entry"
+            ]
+          },
+          {
+            "group": "Ingredients",
+            "pages": [
+              "ingredients/understanding-results",
+              "ingredients/safety-ratings",
+              "ingredients/concerns-and-flags"
+            ]
+          },
+          {
+            "group": "Your Profile",
+            "pages": [
+              "profile/skin-type",
+              "profile/allergies-and-sensitivities",
+              "profile/saved-products"
+            ]
+          },
+          {
+            "group": "FAQ",
+            "pages": [
+              "faq/common-questions",
+              "faq/troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Instant ingredient analysis via camera scan or manual entry",
+    "Safety ratings and concern flags for each ingredient",
+    "Personalized results based on skin type and sensitivities",
+    "Product history and saved favorites",
+    "Plain-language explanations of complex ingredient names"
+  ],
+  "publicApiSurface": [
+    "Scan product barcode or label",
+    "Manual ingredient list entry",
+    "Skin profile customization",
+    "Saved products library",
+    "Ingredient detail lookup"
+  ]
+}

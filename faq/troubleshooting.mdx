@@ -1,0 +1,187 @@
+---
+title: "Troubleshoot Skincare Ingredient Scanner App Issues"
+description: "Resolve the most common scanning errors, incorrect results, camera problems, and login issues with these step-by-step troubleshooting guides."
+---
+
+If you run into problems while scanning a product or your results don't look right, work through the relevant section below. Most issues have a quick fix. If none of these steps resolve your problem, contact support at the bottom of this page.
+
+<AccordionGroup>
+  <Accordion title="The app can't read the ingredient list">
+    Poor scan quality is the most common reason the app fails to extract an ingredient list. Try the following steps in order before falling back to manual entry.
+
+    <Steps>
+      <Step title="Improve your lighting">
+        Move to a brighter area or turn on a nearby light. Avoid scanning under direct overhead lighting that creates glare on the label. Natural, diffused light works best.
+      </Step>
+      <Step title="Hold the camera steady">
+        Rest your hand or the product on a flat surface to reduce motion blur. Give the camera a moment to auto-focus before the app captures the image.
+      </Step>
+      <Step title="Fill the frame with the ingredient text">
+        Move the camera close enough so the ingredient list fills most of the viewfinder. Avoid including the product name, logo, or other sections of the label, which can confuse the OCR engine.
+      </Step>
+      <Step title="Try a different angle">
+        If the label is curved (common on bottles and tubes), try photographing it at a slight angle to reduce distortion. Holding the label flat against a hard surface while scanning also helps.
+      </Step>
+      <Step title="Clean the camera lens">
+        Smudges or dust on the lens degrade image sharpness significantly. Wipe the lens gently with a soft cloth before scanning.
+      </Step>
+      <Step title="Use manual entry as a fallback">
+        If the camera still can't read the label, tap **Enter manually** on the scan screen and type or paste the ingredient list directly. Separate each ingredient with a comma, exactly as it appears on the label.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="The scan extracted the wrong ingredients">
+    OCR technology is highly accurate on standard label fonts and sizes, but small print, decorative typography, or compressed text can occasionally cause extraction errors. The ingredient list is fully editable before you run an analysis.
+
+    <Steps>
+      <Step title="Review the extracted list">
+        After a scan, the app displays the extracted ingredient list for your review before running the analysis. Read through it carefully.
+      </Step>
+      <Step title="Tap any ingredient to correct it">
+        Tap on a misspelled or incorrect ingredient name to edit it inline. You can also add missing ingredients or remove extras that were pulled in from another part of the label.
+      </Step>
+      <Step title="Run the analysis with the corrected list">
+        Once you're satisfied the list matches the label, tap **Analyze** to get your results.
+      </Step>
+    </Steps>
+
+    <Tip>
+      Cross-reference the extracted list against the physical label for products with very small print. Even a single character difference in an INCI name can affect which ingredient is matched in our database.
+    </Tip>
+  </Accordion>
+
+  <Accordion title="The barcode scan says 'Product not found'">
+    A "Product not found" result means the barcode exists but isn't yet in our database, or the barcode was scanned incorrectly.
+
+    First, confirm the scan registered cleanly — the app will briefly highlight the barcode when it reads it successfully. If you're unsure, try scanning again.
+
+    If the product genuinely isn't in the database, you have two options:
+
+    - **Switch to camera scan mode** by tapping the camera icon on the scan screen. Point your camera at the ingredient list to extract it directly from the label.
+    - **Enter the ingredients manually** by tapping **Enter manually** and typing the list.
+
+    After scanning manually, tap **Suggest this product** to flag it for our database curation team. Once verified, the product will be added so future users can find it by barcode.
+  </Accordion>
+
+  <Accordion title="My results look different from last time I scanned this product">
+    Two things can cause results to change between scans of the same product.
+
+    **Your skin profile was updated.** Results are personalized to your current profile. If you added or removed a sensitivity, changed your skin type, or modified any other profile setting, the app re-evaluates all ingredients against your new profile. This is expected behavior — your results are always based on your most current settings.
+
+    **The ingredient database was updated.** We regularly update safety ratings as new peer-reviewed research becomes available. An ingredient that was previously rated "Safe" may be updated to "Caution" (or vice versa) when new evidence emerges. You can see the last database update date in **Profile → Settings → About**.
+
+    <Info>
+      If a rating change concerns you, tap the ingredient name in your results to read the full evidence summary, including which studies informed the current rating.
+    </Info>
+  </Accordion>
+
+  <Accordion title="The app is crashing or freezing">
+    Crashes and freezes are usually caused by a stale app version, a memory issue, or a corrupted cache. Work through these steps to resolve it.
+
+    <Steps>
+      <Step title="Force close and reopen the app">
+        On iOS, swipe up from the bottom of the screen and swipe the app away. On Android, open Recent Apps and dismiss it. Then reopen the app.
+      </Step>
+      <Step title="Check for updates">
+        Open the App Store (iOS) or Play Store (Android), search for Skincare Ingredient Scanner, and install any available update. Most stability issues are addressed in patch releases.
+      </Step>
+      <Step title="Restart your device">
+        A full device restart clears memory issues that can cause persistent freezing.
+      </Step>
+      <Step title="Reinstall the app">
+        If crashes continue, uninstall the app and reinstall it from the store. Your account data is stored in the cloud and will be restored when you log back in.
+      </Step>
+    </Steps>
+
+    <Warning>
+      Uninstalling the app removes any locally cached data, including the offline ingredient database. You will need to re-download it after reinstalling if you use offline mode.
+    </Warning>
+  </Accordion>
+
+  <Accordion title="Camera permission is denied">
+    The app requires camera access to scan labels. If you previously denied this permission, the app cannot request it again automatically — you need to re-enable it in your device settings.
+
+    <Tabs>
+      <Tab title="iOS">
+        <Steps>
+          <Step title="Open Settings">
+            Go to the **Settings** app on your iPhone or iPad.
+          </Step>
+          <Step title="Find the app">
+            Scroll down and tap **Skincare Ingredient Scanner**.
+          </Step>
+          <Step title="Enable camera access">
+            Tap **Camera** and select **Allow**.
+          </Step>
+          <Step title="Return to the app">
+            Reopen the app. Camera scanning should now be available.
+          </Step>
+        </Steps>
+      </Tab>
+      <Tab title="Android">
+        <Steps>
+          <Step title="Open Settings">
+            Go to the **Settings** app on your Android device.
+          </Step>
+          <Step title="Navigate to app permissions">
+            Tap **Apps**, then find and tap **Skincare Ingredient Scanner**.
+          </Step>
+          <Step title="Enable camera access">
+            Tap **Permissions → Camera → Allow only while using the app**.
+          </Step>
+          <Step title="Return to the app">
+            Reopen the app. Camera scanning should now be available.
+          </Step>
+        </Steps>
+      </Tab>
+    </Tabs>
+
+    If you prefer not to grant camera access, manual ingredient entry is always available without any permissions.
+  </Accordion>
+
+  <Accordion title="I'm not receiving concern alerts for ingredients I added to my sensitivities list">
+    If the app isn't flagging an ingredient you've added to your sensitivity profile, one of the following usually explains it.
+
+    **The ingredient name doesn't match our database.** Our database uses INCI names. If you added a common name (for example, "fragrance" instead of "Parfum", or "vitamin C" instead of "Ascorbic Acid"), the app may not match it correctly. Try removing the entry and re-adding the ingredient using its INCI name.
+
+    **The ingredient was added by category.** Some sensitivities can be added by category (such as "essential oils" or "parabens"). If you added an individual ingredient that falls within a category you've already added, check whether the category is enabled in your profile.
+
+    <Steps>
+      <Step title="Check your sensitivities list">
+        Go to **Profile → Skin Profile → Sensitivities** and confirm the ingredient is listed exactly as it appears in INCI format.
+      </Step>
+      <Step title="Correct or re-add the ingredient">
+        Remove the existing entry and re-add it using the INCI name. Use the search bar in the sensitivity editor — if the ingredient is in our database, it will appear as a suggestion.
+      </Step>
+      <Step title="Re-scan the product">
+        After updating your profile, re-scan the product. Alerts are evaluated at scan time against your current profile.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="I can't log in to my account">
+    If you can't access your account, the resolution depends on how you originally signed up.
+
+    **Email and password accounts:** Tap **Forgot Password** on the login screen and enter the email address associated with your account. You'll receive a reset link within a few minutes. Check your spam folder if it doesn't arrive.
+
+    **Social login accounts (Google or Apple):** If you signed up using **Continue with Google** or **Continue with Apple**, you must use the same option to log back in — these accounts do not have a separate password. Tapping "Forgot Password" will not work for social login accounts.
+
+    <Tabs>
+      <Tab title="Google login">
+        Tap **Continue with Google** on the login screen and select the Google account you used when signing up.
+      </Tab>
+      <Tab title="Apple login">
+        Tap **Continue with Apple**. If you used **Hide My Email** when you signed up, Apple will still route you to your correct account automatically.
+      </Tab>
+    </Tabs>
+
+    <Info>
+      If you're unsure which login method you used, try each option. The app will confirm if an account exists for the selected method.
+    </Info>
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  If your issue isn't covered here, contact our support team directly. Reach us through **Profile → Help → Contact Us** in the app, or email us at support@skincareingredientscanner.com. Include your device model, OS version, and a brief description of the issue so we can help you faster.
+</Note>

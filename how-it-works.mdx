@@ -1,0 +1,72 @@
+---
+title: "How Skincare Ingredient Scanner Analyzes Your Products"
+description: "Learn how the app extracts ingredients from scans, looks them up in a curated database, calculates safety ratings, and personalizes results for your skin."
+---
+
+When you scan a product, Skincare Ingredient Scanner runs it through a four-stage pipeline: your photo or barcode is converted into a structured ingredient list, each ingredient is looked up in the app's database, a safety rating is calculated, and the results are filtered through your skin profile to surface what matters most to you. Understanding how each stage works helps you interpret results with confidence and know where the app's analysis is strong and where it has limits.
+
+<Note>
+  Skincare Ingredient Scanner provides information for educational purposes only. Results are not a substitute for advice from a board-certified dermatologist or allergist. If you have a severe allergy or a complex skin condition, consult a medical professional before trying new products.
+</Note>
+
+## Ingredient database
+
+The foundation of every analysis is the app's ingredient database — a curated reference of thousands of cosmetic ingredients derived from publicly available safety data, peer-reviewed research, and established resources including the EU's CosIng database, the Environmental Working Group's Skin Deep database, and published dermatological literature.
+
+Each entry in the database includes:
+
+- **INCI name** and common synonym mapping (so "vitamin C" matches "ascorbic acid" and "l-ascorbic acid")
+- **Function** — what role the ingredient plays in a formula (emollient, preservative, surfactant, fragrance, etc.)
+- **Safety classification** — the baseline rating assigned to the ingredient independent of any individual's skin profile
+- **Known concerns** — a structured list of concerns the ingredient is associated with, such as contact sensitization, endocrine disruption potential, or comedogenicity
+- **Comedogenic rating** — a 0–5 scale indicating the ingredient's likelihood of clogging pores, based on established comedogenicity research
+- **Condition relevance** — flags for skin conditions where the ingredient deserves extra scrutiny, such as rosacea, perioral dermatitis, or fungal acne
+
+The database is updated regularly as new research is published and regulatory guidance changes. The version number of the currently installed database is visible in **Settings > About**.
+
+## Safety ratings
+
+Each ingredient in a scanned product receives a safety rating displayed as a color and a numeric score on a 1–10 scale.
+
+<Tabs>
+  <Tab title="Green (1–3)">
+    Ingredients rated green are considered low concern for most skin types based on current research. They have a well-established safety profile, minimal association with irritation or sensitization, and no significant regulatory restrictions in major markets. Examples include niacinamide, hyaluronic acid, and glycerin.
+  </Tab>
+  <Tab title="Yellow (4–6)">
+    Ingredients rated yellow have a moderate concern level. They may be well-tolerated by most people but have known associations with irritation in sensitive individuals, limited long-term safety data, or are used at concentrations that can be problematic. Examples include certain preservatives like methylisothiazolinone and high-concentration alcohol (ethanol) in leave-on products.
+  </Tab>
+  <Tab title="Red (7–10)">
+    Ingredients rated red have a high concern level. They are associated with frequent irritation or allergic reactions, are restricted or banned in regulated markets, or have significant evidence linking them to harm in topical use. Examples include formaldehyde-releasing preservatives, certain parabens at high concentrations, and ingredients on the EU's list of restricted cosmetic substances.
+  </Tab>
+</Tabs>
+
+Ratings reflect the ingredient in isolation. A full product formula can behave differently than individual ingredients would suggest — the concentration of each ingredient, the pH of the formula, and interactions between ingredients all affect real-world performance and tolerance. The app's ratings are a starting point for informed decision-making, not a definitive verdict on a finished product.
+
+## Personalization
+
+Your skin profile changes which concerns the app surfaces prominently in your results. The underlying safety ratings for each ingredient don't change, but the app applies a relevance layer on top of them based on what you've told it about your skin.
+
+<AccordionGroup>
+  <Accordion title="Skin type adjustments">
+    Certain ingredients are more problematic for specific skin types regardless of their baseline safety rating. For example, heavy occlusives like petrolatum and mineral oil are well-rated ingredients overall, but the app flags them more prominently for users with oily or acne-prone skin because they can contribute to congestion for that skin type.
+  </Accordion>
+  <Accordion title="Known allergen alerts">
+    If you've added specific ingredients or ingredient families to your sensitivity list, the app highlights any matches at the top of your results with a dedicated alert banner — even if the ingredient has a green safety rating overall. A fragrance ingredient rated green is still a concern if you have a documented fragrance allergy.
+  </Accordion>
+  <Accordion title="Skin condition flags">
+    Users who flag skin conditions like rosacea, eczema, or fungal acne (malassezia folliculitis) receive additional context on ingredients that are commonly implicated in flare-ups for those conditions. For example, users with rosacea see prominent warnings on alcohol-based ingredients, witch hazel, and menthol, which can trigger vasodilation and worsen redness — even when those ingredients have moderate overall safety ratings.
+  </Accordion>
+  <Accordion title="Cumulative fragrance exposure">
+    When a product contains multiple fragrance ingredients — even individually low-rated ones — the app calculates a cumulative fragrance load and surfaces a summary warning if the combined count exceeds a threshold associated with increased sensitization risk. This is particularly relevant for users with sensitive skin or fragrance sensitivity.
+  </Accordion>
+</AccordionGroup>
+
+## Scanning technology
+
+The app uses two distinct methods to extract ingredient data from a product, depending on what you point your camera at.
+
+**OCR (optical character recognition)** is used when you scan the text of an ingredient label directly. The app captures a still frame from your camera feed, runs it through an on-device OCR model optimized for small-print cosmetic labels, and extracts the raw ingredient string. The extracted text is then parsed to separate individual ingredients (ingredient lists use comma-delimited INCI names by convention), corrected for common OCR errors using fuzzy matching against the ingredient database, and submitted for analysis.
+
+**Barcode scanning** is used when you point your camera at a product barcode (UPC or EAN). The app looks up the barcode against a product database of commercially available skincare products, retrieves the associated ingredient list, and runs the same analysis pipeline. Barcode lookup is faster and more accurate than OCR when the product is in the database, but not every product is listed — particularly niche brands, regional products, or newly launched items. If a barcode lookup fails, the app automatically offers to switch to camera OCR or manual entry.
+
+If neither scanning method produces a clean result, use [manual entry](/scanning/manual-entry) to paste the ingredient string directly.

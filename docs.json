@@ -1,0 +1,59 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "name": "Skincare Ingredient Scanner",
+  "theme": "almond",
+  "colors": {
+    "primary": "#C47B6A",
+    "light": "#F5EAE6",
+    "dark": "#7A3E30"
+  },
+
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Guide",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "how-it-works"
+            ]
+          },
+          {
+            "group": "Scanning",
+            "pages": [
+              "scanning/scan-a-product",
+              "scanning/photo-tips",
+              "scanning/manual-entry"
+            ]
+          },
+          {
+            "group": "Ingredients",
+            "pages": [
+              "ingredients/understanding-results",
+              "ingredients/safety-ratings",
+              "ingredients/concerns-and-flags"
+            ]
+          },
+          {
+            "group": "Your Profile",
+            "pages": [
+              "profile/skin-type",
+              "profile/allergies-and-sensitivities",
+              "profile/saved-products"
+            ]
+          },
+          {
+            "group": "FAQ",
+            "pages": [
+              "faq/common-questions",
+              "faq/troubleshooting"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
